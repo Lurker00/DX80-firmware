@@ -42,6 +42,8 @@ The full list is:
 
 It is obvious that none of them have any use in DX80.
 
+**Note:** At the startup, you may see two small logos instead of one big on the screen. It's OK, don't worry! The stock firmware displays two similar pictures with almost a second delay in between, when with this modification there is no a delay, which causes distorted screen view.
+
 ##3. CPU is always working at the highest performance
 
 Changes in the CPU working frequency during audio playback affect the stability of the power source and temperature, probably, also the stability of the sound stream from CPU to DAC. So, stable CPU speed also means stable power and temperature of other components: DAC, clock generator, op-amps.
