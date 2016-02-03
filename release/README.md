@@ -6,6 +6,9 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
+- [`DX80FirmwareV1.3.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L1.7z) - same as L0, but with default fonts.
+- [`DX80FirmwareV1.3.0-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]).
+
 [1]: #1-fonts-replaced
 [2]: #2-unused-services-disabled
 [3]: #3-cpu-is-always-working-at-the-highest-performance
@@ -46,15 +49,15 @@ It is obvious that none of them have any use in DX80.
 
 ##3. CPU is always working at the highest performance
 
-Changes in the CPU working frequency during audio playback affect the stability of the power source and temperature, probably, also the stability of the sound stream from CPU to DAC. So, stable CPU speed also means stable power and temperature of other components: DAC, clock generator, op-amps.
+By default, Android uses `interactive` CPU performance governor, meaning, CPU frequency depends on a load and may be changed. Changes in the CPU working frequency during audio playback affect the stability of the power source and temperature, probably, also the stability of the sound stream from CPU to DAC. So, stable CPU speed also means stable power and temperature of other components: DAC, clock generator, op-amps. This firmware forces `performance` governor, i.e. always highest supported frequency.
 
 Keep CPU running at the highest speed (1.2GHz for DX80) does not mean to drain more power: Linux/Android kernel is smart enough to halt a CPU core if it is not actually used. Also, CPU is not the main power consumer: display, flash, RAM, DAC and analog part (including headphone amplifier) in total consume much more.
 
 ##4. Unregistered video codecs
 
-The codec set used by Mango player includes video playback related stuff. The tweak is to remove video codecs from declarations.
+The codec set used by Mango player includes video playback related stuff. The tweak is to remove video codecs from declarations. It slightly optimizes the way the player works.
 
 ##5. Custom built NTFS drivers
 Recently I've finished [my port of exFAT and NTFS drivers for Android](https://github.com/Lurker00/Android-fs) and decided to use them in DX80 firmware. They are built from the latest original source code (DX80 uses old versions), and I've made some changes which I found useful for DX80: in particular, NTFS driver does not update "last access" timestamp. It means, there are no writes to the SD card or HDD each time a track is played or a cover is displayed.
 
-**Note:** exFAT driver in DX80 is implemented at the kernel level, and currently I see no a way to replace it with mine.
+**Note:** exFAT driver in DX80 is implemented at the kernel level, and currently I see no a way to replace it with mine. Good news that it does not update "last access" timestamp, so, no reasons to worry about.
