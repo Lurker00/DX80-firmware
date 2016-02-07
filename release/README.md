@@ -15,6 +15,7 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 [3]: #3-cpu-is-always-working-at-the-highest-performance
 [4]: #4-unregistered-video-codecs
 [5]: #5-custom-built-ntfs-drivers
+[6]: #6-aggressive-firmware-cleanup
 
 #Detailed description of the changes
 
@@ -62,3 +63,10 @@ The codec set used by Mango player includes video playback related stuff. The tw
 Recently I've finished [my port of exFAT and NTFS drivers for Android](https://github.com/Lurker00/Android-fs) and decided to use them in DX80 firmware. They are built from the latest original source code (DX80 uses old versions), and I've made some changes which I found useful for DX80: in particular, NTFS driver does not update "last access" timestamp. It means, there are no writes to the SD card or HDD each time a track is played or a cover is displayed.
 
 **Note:** exFAT driver in DX80 is implemented at the kernel level, and currently I see no a way to replace it with mine. Good news that it does not update "last access" timestamp, so, no reasons to worry about.
+
+##6. Aggressive firmware cleanup
+
+The stock firmware image contains a lot of files that are not actually used. I've removed most of them.
+
+The MangoPlayer sound library uses a proprietary [OpenMAX](https://en.wikipedia.org/wiki/OpenMAX) engine, that supports sound playback via [OpenSL ES](https://en.wikipedia.org/wiki/OpenSL_ES) interface, which is not used in DX80. I've written a small stub to replace the system library, which allowed me to remove even more files. After this, MangoPlayer also requires less RAM to work, because OpenGL ES related stuff is not loaded with the player.
+
