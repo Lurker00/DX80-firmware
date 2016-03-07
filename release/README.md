@@ -6,7 +6,7 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
-- [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]), flash partition table corrected ([7]).
+- [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - based on L0, with even more aggressive cleanup ([6]) and flash partition table corrected ([7]).
 - [`DX80FirmwareV1.3.3-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L1.7z) - same as L0, but with default fonts.
 - [`DX80FirmwareV1.3.3-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]).
 - [`DX80FirmwareV1.3.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L1.7z) - same as L0, but with default fonts.
