@@ -6,6 +6,7 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
+- [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]), flash partition table corrected ([7]).
 - [`DX80FirmwareV1.3.3-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L1.7z) - same as L0, but with default fonts.
 - [`DX80FirmwareV1.3.3-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]).
 - [`DX80FirmwareV1.3.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L1.7z) - same as L0, but with default fonts.
@@ -18,6 +19,7 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 [4]: #4-unregistered-video-codecs
 [5]: #5-custom-built-ntfs-drivers
 [6]: #6-aggressive-firmware-cleanup
+[7]: #7-flash-partition-table-corrected
 
 #Detailed description of the changes
 
@@ -31,6 +33,8 @@ In DAPs, with limited space and one battery as the power source for both digital
 iBasso uses `Microsoft YaHei` for Latin-based and Chinese characters, and `Nimbus Sans Global Bold` for the rest (Cyrillic, Japanese, Korean, Thai etc). It also uses pre-calculated character width tables, which (confirmed by calculations!) do not correspond to any, or any combination, of those fonts. Regardless of the reason iBasso went this way, the resulting texts look awful for me, and it was the primary reason for the firmware modification.
 
 The two fonts used by iBasso are replaced with one, which is `Roboto Condensed`, with the missing characters merged from `Arial Unicode MS`. Character width tables were calculated from the actual font metrics.
+
+Actually, `MotoyaLMaru W3 mono` is used for Japanese characters, and it also was replaced with my combined font starting from 1.3.3L2.
 
 ##2. Unused services disabled
 
@@ -72,3 +76,10 @@ The stock firmware image contains a lot of files that are not actually used. I'v
 
 The MangoPlayer sound library uses a proprietary implementation of [OpenMAX](https://en.wikipedia.org/wiki/OpenMAX) engine, that supports sound playback via [OpenSL ES](https://en.wikipedia.org/wiki/OpenSL_ES) interface, which is not used in DX80. I've written a [small stub to replace the system library](../src/jni), which allowed me to remove even more files. After this, MangoPlayer also requires less RAM to work, because OpenGL ES related stuff is not loaded with the player.
 
+In 1.3.3L2, I've removed even more files, and also OpenMAX engine components that I've found not used by MangoPlayer.
+
+##7. Flash Partition Table Corrected
+
+Starting from the first firmware update (1.1.0), the flash partition table is incorrect: the last partition (`userdata`) overlaps some other partitions. It is not used, and that's because it does not cause real problems. But I believe better to be on the safe side.
+
+**Note:** If you flash a firmware with a partition table different from the previous one, the process takes two steps, with automatic reboot in between, and the second step (actually the firmware update) is always performed in GUI mode, even if you started the firmware update from the recovery console.
