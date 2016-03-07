@@ -81,7 +81,7 @@ In 1.3.3L2, I've removed even more files, and also OpenMAX engine components tha
 
 ##7. Flash partition table corrected
 
-Starting from the first firmware update (1.1.0), the flash partition table is incorrect: the last partition (`userdata`) overlaps some other partitions. It is not used, and that's because it does not cause real problems. But I believe better to be on the safe side.
+Starting from the first firmware update (1.1.0), the flash partition table is incorrect: the last partition (`user`) overlaps some other partitions. It is not used, and that's because it does not cause real problems. But I believe better to be on the safe side.
 
 **Note:** If you flash a firmware with a partition table different from the previous one, the process takes two steps, with automatic reboot in between, and the second step (actually the firmware update) is always performed in GUI mode, even if you started the firmware update from the recovery console.
 
