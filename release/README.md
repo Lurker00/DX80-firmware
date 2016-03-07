@@ -78,7 +78,7 @@ The MangoPlayer sound library uses a proprietary implementation of [OpenMAX](htt
 
 In 1.3.3L2, I've removed even more files, and also OpenMAX engine components that I've found not used by MangoPlayer.
 
-##7. Flash Partition Table Corrected
+##7. Flash partition table corrected
 
 Starting from the first firmware update (1.1.0), the flash partition table is incorrect: the last partition (`userdata`) overlaps some other partitions. It is not used, and that's because it does not cause real problems. But I believe better to be on the safe side.
 
