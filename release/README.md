@@ -56,7 +56,7 @@ The full list is:
 
 It is obvious that none of them have any use in DX80.
 
-**Note:** At the startup, you may see two small logos instead of one big on the screen. It's OK, don't worry! The stock firmware displays two similar pictures with almost a second delay in between, when with this modification there is no a delay, which causes distorted screen view.
+**Note:** At the startup, you may see two small logos instead of one big on the screen. It's only cosmetic issue, don't worry!
 
 ##3. CPU is always working at the highest performance
 
@@ -103,3 +103,5 @@ This finalizes the process started by "unused services disabled ([2])" and "aggr
 Finally, almost all files that have no use in this particular environment, were deleted from the firmware image. Almost - because I've left some of them, which are usefult for tests.
 
 **After this change, I can say that the firmware has been optimized to run MangoPlayer to the extent I can't imagine what else could be done**. I'll certainly do if I would :)
+
+**Note:** The firmware update process may take two steps, with automatic reboot in between, and the second step (actually the firmware update) is always performed in GUI mode, even if you started the firmware update from the recovery console. This happens due to kernel parameters changed, just like with [7].
