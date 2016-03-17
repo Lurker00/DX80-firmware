@@ -6,6 +6,7 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
+- [`DX80FirmwareV1.3.3-L3.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - based on L2, with ultimate cleanup ([9]).
 - [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - based on L0, with even more aggressive cleanup ([6]), flash partition table corrected ([7]), USB device names fixed ([8]).
 - [`DX80FirmwareV1.3.3-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L1.7z) - same as L0, but with default fonts.
 - [`DX80FirmwareV1.3.3-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]).
@@ -21,6 +22,7 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 [6]: #6-aggressive-firmware-cleanup
 [7]: #7-flash-partition-table-corrected
 [8]: #8-usb-device-names-fixed
+[9]: #9-ultimate-cleanup
 
 #Detailed description of the changes
 
@@ -85,6 +87,19 @@ Starting from the first firmware update (1.1.0), the flash partition table is in
 
 **Note:** If you flash a firmware with a partition table different from the previous one, the process takes two steps, with automatic reboot in between, and the second step (actually the firmware update) is always performed in GUI mode, even if you started the firmware update from the recovery console.
 
-#8. USB Device names fixed
+##8. USB Device names fixed
 
 You might noticed that after every factory reset, when you connect DX80 to your computer, it finds new devices and install drivers. This is because pseudo-random serial numbers are used for drives, and these numbers are re-created after every factory reset. Starting from 1.3.3L2, a fixed character sequency used instad. Also, "iBasso" and "DX80" strings are used for the manufacturer and model names, instead of "rockchip" and "rk312x".
+
+##9. Ultimate cleanup
+
+This finalizes the process started by "unused services disabled ([2])" and "aggressive cleanup ([6])". I mean it, because, starting from 1.3.3L3, `MangoPlayer` is the only running process, apart from the `kernel` and `init`, which are required, obviously! Details:
+
+* System logging is turned off. In particular, it is achived by a `liblog.so` stub that does nothing.
+* SELinux is turned off. Not a permissve mode: SELinux does not even start.
+* Default I/O scheduler for block devices is [`noop`](https://en.wikipedia.org/wiki/Noop_scheduler) (was [`cfq`](https://en.wikipedia.org/wiki/CFQ)). For flash memory cards, and, especially, in one process environment, any other scheduler just takes memory and CPU cycles.
+* [`KSM` (Kernel Same-page Merging)](https://en.wikipedia.org/wiki/Kernel_same-page_merging) kernel service stopped. With only one process running and plenty of RAM, it just interrupts MangoPlayer two times per second without a real need.
+
+Finally, almost all files that have no use in this particular environment, were deleted from the firmware image. Almost - because I've left some of them, which are usefult for tests.
+
+**After this change, I can say that the firmware has been optimized to run MangoPlayer to the extent I can't imagine what else could be done**. I'll certainly do if I would :)
