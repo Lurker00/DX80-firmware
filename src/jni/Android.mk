@@ -16,3 +16,5 @@ LOCAL_PATH := $(call my-dir)
 
 include \
 	$(LOCAL_PATH)/android/platform/frameworks/wilhelm/src/Android.mk \
+	$(LOCAL_PATH)/android/platform/system/core/liblog/Android.mk \
+
