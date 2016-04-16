@@ -6,8 +6,10 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
-- [**`DX80FirmwareV1.3.3-L4.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L4.7z) - based on L3, but with default fonts.
-- [**`DX80FirmwareV1.3.3-L3.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L3.7z) - based on L2, with ultimate cleanup ([9]).
+- [**`DX80FirmwareV1.4.0-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L1.7z) - based on L0, but with default fonts.
+- [**`DX80FirmwareV1.4.0-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L0.7z) - fonts replaced ([1]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).
+- [`DX80FirmwareV1.3.3-L4.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L4.7z) - based on L3, but with default fonts.
+- [`DX80FirmwareV1.3.3-L3.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L3.7z) - based on L2, with ultimate cleanup ([9]).
 - [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - based on L0, with even more aggressive cleanup ([6]), flash partition table corrected ([7]), USB device names fixed ([8]).
 - [`DX80FirmwareV1.3.3-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L1.7z) - same as L0, but with default fonts.
 - [`DX80FirmwareV1.3.3-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]).
@@ -93,6 +95,8 @@ This change is only a parameter to the kernel with the correct value of the part
 ##8. USB Device names fixed
 
 You might noticed that after every factory reset, when you connect DX80 to your computer, it finds new devices and install drivers. This is because pseudo-random serial numbers are used for drives, and these numbers are re-created after every factory reset. Starting from 1.3.3L2, a fixed character sequency used instad. Also, "iBasso" and "DX80" strings are used for the manufacturer and model names, instead of "rockchip" and "rk312x".
+
+**Note:** iBasso has implemented this change starting from firmware 1.4.0.
 
 ##9. Ultimate cleanup
 
