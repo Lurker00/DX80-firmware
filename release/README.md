@@ -6,8 +6,10 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
-- [**`DX80FirmwareV1.4.0-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L1.7z) - based on L0, but with default fonts.
-- [**`DX80FirmwareV1.4.0-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L0.7z) - fonts replaced ([1]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).
+- [**`DX80FirmwareV1.4.2-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L1.7z) - based on L0, but with default fonts.
+- [**`DX80FirmwareV1.4.2-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L0.7z) - fonts replaced ([1]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).
+- [`DX80FirmwareV1.4.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L1.7z) - based on L0, but with default fonts.
+- [`DX80FirmwareV1.4.0-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L0.7z) - fonts replaced ([1]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).
 - [`DX80FirmwareV1.3.3-L4.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L4.7z) - based on L3, but with default fonts.
 - [`DX80FirmwareV1.3.3-L3.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L3.7z) - based on L2, with ultimate cleanup ([9]).
 - [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - based on L0, with even more aggressive cleanup ([6]), flash partition table corrected ([7]), USB device names fixed ([8]).
