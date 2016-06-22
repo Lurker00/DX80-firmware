@@ -6,18 +6,20 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
-- [**`DX80FirmwareV1.4.2-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L1.7z) - based on L0, but with default fonts.
-- [**`DX80FirmwareV1.4.2-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L0.7z) - fonts replaced ([1]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).
-- [`DX80FirmwareV1.4.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L1.7z) - based on L0, but with default fonts.
-- [`DX80FirmwareV1.4.0-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L0.7z) - fonts replaced ([1]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).
-- [`DX80FirmwareV1.3.3-L4.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L4.7z) - based on L3, but with default fonts.
-- [`DX80FirmwareV1.3.3-L3.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L3.7z) - based on L2, with ultimate cleanup ([9]).
-- [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) - based on L0, with even more aggressive cleanup ([6]), flash partition table corrected ([7]), USB device names fixed ([8]).
-- [`DX80FirmwareV1.3.3-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L1.7z) - same as L0, but with default fonts.
-- [`DX80FirmwareV1.3.3-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]).
-- [`DX80FirmwareV1.3.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L1.7z) - same as L0, but with default fonts.
-- [`DX80FirmwareV1.3.0-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]).
-- [`DX80FirmwareV1.2.1-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.2.1-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]).
+| File | Description |
+| --- | --- |
+| [**`DX80FirmwareV1.4.2-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L1.7z) | **based on L0, but with default fonts.** |
+| [**`DX80FirmwareV1.4.2-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L0.7z) | **fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).** |
+| [`DX80FirmwareV1.4.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L1.7z) | based on L0, but with default fonts. |
+| [`DX80FirmwareV1.4.0-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L0.7z) | fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]). |
+| [`DX80FirmwareV1.3.3-L4.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L4.7z) | based on L3, but with default fonts. |
+| [`DX80FirmwareV1.3.3-L3.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L3.7z) | based on L2, with ultimate cleanup ([9]). |
+| [`DX80FirmwareV1.3.3-L2.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L2.7z) | based on L0, with even more aggressive cleanup ([6]), flash partition table corrected ([7]), USB device names fixed ([8]).
+| [`DX80FirmwareV1.3.3-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L1.7z) | same as L0, but with default fonts. |
+| [`DX80FirmwareV1.3.3-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.3-L0.7z) | fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]), firmware size and MangoPlayer RAM usage reduced ([6]).
+| [`DX80FirmwareV1.3.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L1.7z) | same as L0, but with default fonts. |
+| [`DX80FirmwareV1.3.0-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.3.0-L0.7z) | fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]). |
+| [`DX80FirmwareV1.2.1-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.2.1-L0.7z) | fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]), custom built NTFS drivers ([5]). |
 
 [1]: #1-fonts-replaced
 [2]: #2-unused-services-disabled
@@ -102,7 +104,7 @@ You might noticed that after every factory reset, when you connect DX80 to your 
 
 ##9. Ultimate cleanup
 
-This finalizes the process started by "unused services disabled ([2])" and "aggressive cleanup ([6])". I mean it, because, starting from 1.3.3L3, `MangoPlayer` is the only running process, apart from the `kernel` and `init`, which are required, obviously! Details:
+This *finalizes* the process started by "unused services disabled ([2])", "unregistered video codecs ([4])" and "aggressive cleanup ([6])". I mean it, because, starting from 1.3.3L3, `MangoPlayer` is the only running process, apart from the `kernel` and `init`, which are required, obviously! Details:
 
 * System logging is turned off. In particular, it is achived by a [`liblog.so` stub that does nothing](https://github.com/Lurker00/DX80-firmware/blob/master/src/jni).
 * SELinux is turned off. Not a permissve mode: SELinux does not even start.
