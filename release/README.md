@@ -115,6 +115,6 @@ This *finalizes* the process started by "unused services disabled ([2])", "unreg
 
 Finally, almost all files that have no use in this particular environment, were deleted from the firmware image. Almost - because I've left some of them, which are usefult for tests.
 
-**After this change, I can say that the firmware has been optimized to run MangoPlayer to the extent I can't imagine what else could be done**. I'll certainly do if I would :)
+**After this change, I can say that the firmware has been optimized to run MangoPlayer to the extent I can't imagine what else could be done**. I'll certainly do if I'd find more :)
 
 **Note:** The firmware update process may take two steps, with automatic reboot in between, and the second step (actually the firmware update) is always performed in GUI mode, even if you started the firmware update from the recovery console. This happens due to kernel parameters changed, just like with [7].
