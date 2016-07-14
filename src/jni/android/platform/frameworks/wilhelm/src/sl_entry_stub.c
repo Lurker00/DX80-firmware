@@ -16,7 +16,8 @@
 
 #include <SLES/OpenSLES.h>
 
-char __aeabi_unwind_cpp_pr0[0]; //** kis: This prevents C++ exception run-time being linked to this pure C code
+char __aeabi_unwind_cpp_pr0[]= //** kis: This prevents C++ exception run-time being linked to this pure C code
+"This is a stub that does nothing!";
 char __aeabi_unwind_cpp_pr1[0]; //** kis: This prevents C++ exception run-time being linked to this pure C code
 char __aeabi_unwind_cpp_pr2[0]; //** kis: This prevents C++ exception run-time being linked to this pure C code
 

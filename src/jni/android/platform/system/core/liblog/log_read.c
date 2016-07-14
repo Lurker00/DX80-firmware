@@ -41,14 +41,15 @@ LIBLOG_WEAK int socket_local_client(const char *name, int namespaceId, int type)
 }
 
 /* In the future, we would like to make this list extensible */
-static const char *LOG_NAME[LOG_ID_MAX] = {
-    [LOG_ID_MAIN] = "main",
-    [LOG_ID_RADIO] = "radio",
-    [LOG_ID_EVENTS] = "events",
-    [LOG_ID_SYSTEM] = "system",
-    [LOG_ID_CRASH] = "crash",
+static const char *LOG_NAME[LOG_ID_MAX] =
+{
+    [LOG_ID_MAIN]     = "main",
+    [LOG_ID_RADIO]    = "radio",
+    [LOG_ID_EVENTS]   = "events",
+    [LOG_ID_SYSTEM]   = "system",
+    [LOG_ID_CRASH]    = "crash",
     [LOG_ID_SECURITY] = "security",
-    [LOG_ID_KERNEL] = "kernel",
+    [LOG_ID_KERNEL]   = "kernel",
 };
 
 LIBLOG_ABI_PUBLIC const char *android_log_id_to_name(log_id_t log_id)
