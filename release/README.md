@@ -8,8 +8,10 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 
 | File | Description |
 | --- | --- |
-| [**`DX80FirmwareV1.5.2-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.2-L1.7z) | **based on L0, but with default fonts.** |
-| [**`DX80FirmwareV1.5.2-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.2-L0.7z) | **fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]).** |
+| [**`DX80FirmwareV1.5.8-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.8-L1.7z) | **based on L0, but with default fonts.** |
+| [**`DX80FirmwareV1.5.8-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.8-L0.7z) | **fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), ultimate cleanup ([9]).** |
+| [`DX80FirmwareV1.5.2-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.2-L1.7z) | based on L0, but with default fonts. |
+| [`DX80FirmwareV1.5.2-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.2-L0.7z) | fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]). |
 | [`DX80FirmwareV1.4.2-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L1.7z) | based on L0, but with default fonts. |
 | [`DX80FirmwareV1.4.2-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L0.7z) | fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]). |
 | [`DX80FirmwareV1.4.0-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.0-L1.7z) | based on L0, but with default fonts. |
@@ -97,6 +99,8 @@ Starting from the first firmware update (1.1.0), the flash partition table is in
 This change is only a parameter to the kernel with the correct value of the partition start offset. It does *not* re-partition the flash. It does not prevent to install an official or any other firmware version after that.
 
 **Note:** The firmware update process may take two steps, with automatic reboot in between, and the second step (actually the firmware update) is always performed in GUI mode, even if you started the firmware update from the recovery console. This happens due to kernel parameters changed.
+
+**Note 2:** Starting from 1.5.8, iBasso has corrected the partition table, and also increased internal storage used for the player data files, decreasing the size of the last, unused, partition (`user`) to the minimum.
 
 ##8. USB Device names fixed
 
