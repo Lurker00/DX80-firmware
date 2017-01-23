@@ -113,11 +113,11 @@ You might noticed that after every factory reset, when you connect DX80 to your 
 This *finalizes* the process started by "unused services disabled ([2])", "unregistered video codecs ([4])" and "aggressive cleanup ([6])". I mean it, because, starting from 1.3.3L3, `MangoPlayer` is the only running process, apart from the `kernel` and `init`, which are required, obviously! Details:
 
 * System logging is turned off. In particular, it is achived by a [`liblog.so` stub that does nothing](https://github.com/Lurker00/DX80-firmware/blob/master/src/jni).
-* SELinux is turned off. Not a permissve mode: SELinux does not even start.
+* SELinux is turned off. Not a permissive mode: SELinux does not even start.
 * Default I/O scheduler for block devices is [`noop`](https://en.wikipedia.org/wiki/Noop_scheduler) (was [`cfq`](https://en.wikipedia.org/wiki/CFQ)). For flash memory cards, and, especially, in one process environment, any other scheduler just takes memory and CPU cycles.
 * [`KSM` (Kernel Same-page Merging)](https://en.wikipedia.org/wiki/Kernel_same-page_merging) kernel service stopped. With only one process running and plenty of RAM, it just interrupts MangoPlayer two times per second without a real need.
 
-Finally, almost all files that have no use in this particular environment, were deleted from the firmware image. Almost - because I've left some of them, which are usefult for tests.
+Finally, almost all files that have no use in this particular environment, were deleted from the firmware image. Almost - because I've left some of them, which are useful for tests.
 
 **After this change, I can say that the firmware has been optimized to run MangoPlayer to the extent I can't imagine what else could be done**. I'll certainly do if I'd find more :)
 
