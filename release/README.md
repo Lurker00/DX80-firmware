@@ -8,8 +8,10 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 
 | File | Description |
 | --- | --- |
-| [**`DX80FirmwareV1.5.8-L1.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.8-L1.7z) | **based on L0, but with default fonts.** |
-| [**`DX80FirmwareV1.5.8-L0.7z`**](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.8-L0.7z) | **fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), ultimate cleanup ([9]).** |
+| [**`DX80FirmwareV1.6.0-L1.zip`**](https://github.com/Lurker00/DX80-firmware/releases/download/v1.6.0/DX80FirmwareV1.6.0-L1.zip) | **based on L0, but with default fonts.** |
+| [**`DX80FirmwareV1.6.0-L0.zip`**](https://github.com/Lurker00/DX80-firmware/releases/download/v1.6.0/DX80FirmwareV1.6.0-L0.zip) | **fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), ultimate cleanup ([9]), image size reduced ([10]).** |
+| [`DX80FirmwareV1.5.8-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.8-L1.7z) | based on L0, but with default fonts. |
+| [`DX80FirmwareV1.5.8-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.8-L0.7z) | fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), ultimate cleanup ([9]). |
 | [`DX80FirmwareV1.5.2-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.2-L1.7z) | based on L0, but with default fonts. |
 | [`DX80FirmwareV1.5.2-L0.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.5.2-L0.7z) | fonts replaced ([1]), CPU at performance mode ([3]), custom built NTFS drivers ([5]), flash partition table corrected ([7]), ultimate cleanup ([9]). |
 | [`DX80FirmwareV1.4.2-L1.7z`](https://github.com/Lurker00/DX80-firmware/raw/master/release/DX80FirmwareV1.4.2-L1.7z) | based on L0, but with default fonts. |
@@ -34,6 +36,7 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 [7]: #7-flash-partition-table-corrected
 [8]: #8-usb-device-names-fixed
 [9]: #9-ultimate-cleanup
+[10]: #10-image-size-reduced
 
 # Detailed description of the changes
 
@@ -122,3 +125,7 @@ Finally, almost all files that have no use in this particular environment, were 
 **After this change, I can say that the firmware has been optimized to run MangoPlayer to the extent I can't imagine what else could be done**. I'll certainly do if I'd find more :)
 
 **Note:** The firmware update process may take two steps, with automatic reboot in between, and the second step (actually the firmware update) is always performed in GUI mode, even if you started the firmware update from the recovery console. This happens due to kernel parameters changed, just like with [7].
+
+## 10. Image size reduced
+
+I've removed the firmware parts that were not changed since the very first factory build. It makes download and flashing faster, but these images are not suitable for flashing a device with fully erased memory. If you, by a chance, need to flash an empty device, please first use any stock firmware, then upgrade to such a build.
